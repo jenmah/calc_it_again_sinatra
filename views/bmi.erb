@@ -1,13 +1,22 @@
 <form action="/bmi" method="get">
-  <label for="system">system</label>
-  <input type="text" name="system" placeholder="pick metric or imperial">
-  <label for="weight">WEIGHT</label>
-  <input type="text" name="weight" placeholder="Enter your weight">
-  <label for="height">HEIGHT</label>
-  <input type="text" name="height" placeholder="Enter your height">
-  <input type="submit">
+  <div class="numbers">
+    <div class="system_input">
+    <input type="text" name="system" autocomplete="off">
+    <h4>pick imperial or metric</h4>
+    </div>
+    <div class="bmi_input">
+    <input type="text" name="weight" autocomplete="off">
+    <h4>enter your weight above</h4>
+    </div>
+    <div class="bmi_input">
+    <input type="text" name="height" autocomplete="off">
+    <h4>enter your height above</h4>
+    </div>
+    <input class="button" type="submit">
+  </div>
 </form>
 
 <% if @bmi %>
-<p>Your BMI is <%= @bmi %>.</p>
+<p>your BMI is <%= @bmi %>.</p>
+<h3>things could be worse.</h3>
 <% end %>

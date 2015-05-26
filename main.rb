@@ -19,17 +19,17 @@ get '/' do
 end
 
 get '/power' do
-  @first = params[:first]
+  @first = params[:first].to_f
     if @first
-    @second = params[:second]
-    @result = @first ** @second.to_f
+    @second = params[:second].to_f
+    @result = @first ** @second
   end
   erb :power
 end
 
 
 get '/sqrt' do
-  @first = params[:first]
+  @first = params[:first].to_f
     if @first
     @result = Math.sqrt(@first).to_f
   end
@@ -53,11 +53,11 @@ end
 
 
 get '/mortgage' do
-  @principal = params[:principal]
+  @principal = params[:principal].to_f
   if @principal
   @interest_rate = params[:interest_rate].to_f
   @payments = params[:payments].to_f
-    @monthly_payment = (@principal * (@interest_rate*(1 + @interest_rate)**@payments) / ((1 + @interest_rate)**@payments - 1))
+    @monthly_payment = (@principal * (@interest_rate*(1 + @interest_rate)**@payments) / ((1 + @interest_rate)**@payments - 1)).ceil
     end
   erb :mortgage
 end

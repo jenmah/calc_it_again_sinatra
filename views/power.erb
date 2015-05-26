@@ -1,12 +1,22 @@
 <form action="/power" method="get">
-  <label for="first">FIRST NUMBER</label>
-  <input type="text" name="first" placeholder="Enter the first number">
-  <label for="operator">**</label>
-  <label for="second">SECOND NUMBER</label>
-  <input type="text" name="second" placeholder="Enter a second number">
-  <input type="submit">
+  <div class="numbers">
+    <div class="input">
+    <input type="text" autocomplete="off" name="first">
+    <h4>enter your first number above</h4>
+    </div>
+  <div class="operator">
+<!--     <h5>**</h5> -->
+    <label for="operator">**</label>
+  </div>
+  <div class="input">
+    <input type="text" autocomplete="off" name="second">
+    <h4>enter your second number above</h4>
+  </div>
+    <input class="button" type="submit">
+  </div>
 </form>
 
 <% if @result %>
-<p>The power of <%= @first %> to <%= @second %> is: <%= @result %>.</p>
+<p>the power of <%= @first %> to <%= @second %> is <%= @result %>.</p>
+<h3>i can't believe you didn't know that already.</h3>
 <% end %>

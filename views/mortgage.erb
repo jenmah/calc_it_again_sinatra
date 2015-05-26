@@ -1,13 +1,22 @@
 <form action="/mortgage" method="get">
-  <label for="principal">PRINCIPAL</label>
-  <input type="text" name="principal" placeholder="Enter the principal of the loan">
-  <label for="interest_rate">INTEREST</label>
-  <input type="text" name="interest_rate" placeholder="What is your interest rate?">
-  <label for="payments">PAYMENTS</label>
-  <input type="text" name="payments" placeholder="How many payments do you have?">
-  <input type="submit">
+  <div class="numbers">
+    <div class="mortgage_input">
+      <input type="text" name="principal" autocomplete="off">
+      <h4>enter the principal of the loan</h4>
+    </div>
+    <div class="mortgage_input">
+      <input type="text" name="interest_rate" autocomplete="off">
+      <h4>what's your interest rate?</h4>
+    </div>
+    <div class="mortgage_input">
+      <input type="text" name="payments" autocomplete="off">
+      <h4>how many payments do you have?</h4>
+    </div>
+    <input class="button" type="submit">
+  </div>
 </form>
 
 <% if @monthly_payment %>
-<p>Your monthly payments are <%= @monthly_payment %> per month.</p>
+<p>your monthly payments are <%= @monthly_payment %> per month.</p>
+<h3>can you even afford that?</h3>
 <% end %>
