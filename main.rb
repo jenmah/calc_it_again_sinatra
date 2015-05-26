@@ -62,3 +62,38 @@ get '/mortgage' do
   erb :mortgage
 end
 
+
+
+
+# get '/trip_calc' do
+#   @principal = params[:principal]
+#   if @principal
+#   @interest_rate = params[:interest_rate].to_f
+#   @payments = params[:payments].to_f
+#     @monthly_payment = (@principal * (@interest_rate*(1 + @interest_rate)**@payments) / ((1 + @interest_rate)**@payments - 1))
+#     end
+#   erb :trip_calc
+# end
+
+
+# def mpg_utility(speed, mpg)
+#   if speed > 60
+#     mpg - ((speed - 60) * 2)
+#   else
+#     mpg
+#   end
+# end
+
+# def trip_calc
+#   print "distance: "
+#   distance = gets.to_f
+#   print "mpg: "
+#   mpg = gets.to_f
+#   print "fuel price per gallon: "
+#   cost = gets.to_f
+#   print "speed: "
+#   speed = gets.to_f
+#   mpg = mpg_utility(speed, mpg)
+#   puts "It will take you #{distance/speed} hours at a cost of $#{(distance/mpg)*cost}"
+#   gets
+# end

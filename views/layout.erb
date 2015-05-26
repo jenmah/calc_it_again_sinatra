@@ -3,16 +3,20 @@
 <head>
   <title>Calc It Again With Sinatra</title>
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<header>
   <nav>
-    <li><a href="/">BASIC CALC</a></li>
-    <li><a href="/power">POWER</a></li>
-    <li><a href="/sqrt">SQUARE ROOT</a></li>
-    <li><a href="/bmi">BMI</a></li>
-    <li><a href="/mortgage">MORTGAGE</a></li>
-    <li><a href="/trip_calc">TRIP CALC</a></li>
+    <li><i class="fa fa-calculator"></i><a href="/">BASIC CALC</a></li>
+    <li><i class="fa fa-caret-up"></i></i><a href="/power">POWER</a></li>
+    <li><i class="fa fa-check-square"></i><a href="/sqrt">SQUARE ROOT</a></li>
+    <li><i class="fa fa-male"></i><a href="/bmi">BMI</a></li>
+    <li><i class="fa fa-home"></i><a href="/mortgage">MORTGAGE</a></li>
+    <li><i class="fa fa-car"></i><a href="/trip_calc">TRIP CALC</a></li>
   </nav>
+</header>
   <%= yield %>
 </body>
 </html>
