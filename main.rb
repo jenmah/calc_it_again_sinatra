@@ -57,7 +57,8 @@ get '/mortgage' do
   if @principal
   @interest_rate = params[:interest_rate].to_f
   @payments = params[:payments].to_f
-    @monthly_payment = (@principal * (@interest_rate*(1 + @interest_rate)**@payments) / ((1 + @interest_rate)**@payments - 1)).ceil
+    @monthly_payment = (@principal * (@interest_rate*(1 + @interest_rate)**@payments) / ((1 + @interest_rate)**@payments - 1))
+    
     end
   erb :mortgage
 end
